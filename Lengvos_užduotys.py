@@ -106,3 +106,38 @@ def avg_arr(rnd_arr):
 array = rnd_arr(1,5,2)
 print(array)
 print(avg_arr(array))
+
+print()
+print("-------------------Devintas uždavinys-------------")
+print()
+
+# Sukurkite Funkciją kuri priimtų du skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas skaičius- išoriniam ciklui, antras vidiniam.
+
+def rct(x, y):
+    for i in range(y):
+        print("*" * x)
+
+rct(10, 5)
+
+print()
+print("-------------------Dešimtas uždavinys-------------")
+print()
+
+# Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
+# Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)
+
+def cnt_smb(sentence):
+    cnt_spc = 0
+    cnt_symbol = 0
+    for i in sentence:
+        if i == " ":
+            cnt_spc += 1
+        else:
+            cnt_symbol += 1
+    print(f"Sakinyje tarpų yra {cnt_spc} ir simbolių (raidžių) {cnt_symbol}")
+
+cnt_smb("Šiandien labai graži diena")
+
+print()
+print("-------------------Vienuoliktas uždavinys-------------")
+print()
