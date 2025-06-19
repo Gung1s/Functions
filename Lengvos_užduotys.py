@@ -187,7 +187,7 @@ print()
 # Sukurkite funkciją, kuri iš paduoto masyvo atspausdina tik sveikuosius skaičius. (jei pavyks, patobulinkite,
 # kad funkcija priimtų antrą parametrą True/False kuris nuspręstų ar spausdins tik sveikuosius skaičius ar skaičius su kableliu.
 
-def print_nmb(array, integer = True):
+def print_nmb_v2(array, integer = True):
     for i in array:
         if isinstance(i, (int, float)):
             if integer and isinstance(i, int):
@@ -196,7 +196,7 @@ def print_nmb(array, integer = True):
                 print(i, end=" ")
     print()
 
-print_nmb([1, "gražu", 5, 2.5], True)
+print_nmb_v2([1, "gražu", 5, 2.5], True)
 print()
 
 print()
