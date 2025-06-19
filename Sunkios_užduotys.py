@@ -128,3 +128,48 @@ def gnr_arr_all_prime():
   return masyvas
 
 print(gnr_arr_all_prime())
+
+print()
+print("-------------------Devintas uždavinys-------------")
+print()
+
+# Sugeneruokite masyvą iš 10 elementų, kurie yra masyvai iš 10 elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 100.
+# Jeigu tokio didelio masyvo (ne atskirai mažesnių) pirminių skaičių vidurkis mažesnis už 70, suraskite masyve mažiausią
+# skaičių (nebūtinai pirminį) ir prie jo pridėkite 3. Vėl paskaičiuokite masyvo pirminių skaičių vidurkį ir jeigu mažesnis
+# nei 70 viską kartokite.
+
+def is_prime(n):
+  if n < 2:
+    return False
+  for i in range(2, int(n ** 0.5) + 1):
+    if n % i == 0:
+      return False
+  return True
+
+def rnd_arr_arr():
+  arr_arr = [[random.randint(1,100) for i in range(10)] for i in range(10)]
+  # print(arr_arr)
+  count = 0
+  while True:
+    count += 1
+    prime = [i for x in arr_arr for i in x if is_prime(i)]
+    # print(prime)
+    if prime:
+      avg = sum(prime) / len(prime)
+      # print(avg)
+    else:
+      avg = 0
+    if avg >= 70:
+      break
+    min_value = 101
+    min_i = 0
+    min_j = 0
+    for i in range(len(arr_arr)):
+      for j in range(len(arr_arr[i])):
+        if arr_arr[i][j] < min_value:
+          min_value = arr_arr[i][j]
+          min_i = i
+          min_j = j
+    arr_arr[min_i][min_j] += 3
+  return print(arr_arr, round(avg, 2), count)
+rnd_arr_arr()
