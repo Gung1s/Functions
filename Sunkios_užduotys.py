@@ -171,5 +171,8 @@ def rnd_arr_arr():
           min_i = i
           min_j = j
     arr_arr[min_i][min_j] += 3
-  return print(arr_arr, round(avg, 2), count)
-rnd_arr_arr()
+  return arr_arr, round(avg, 2), count
+
+print(rnd_arr_arr())
+
+
