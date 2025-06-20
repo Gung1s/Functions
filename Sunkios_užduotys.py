@@ -175,4 +175,57 @@ def rnd_arr_arr():
 
 print(rnd_arr_arr())
 
+print()
+print("-------------------Šeštas uždavinys-------------")
+print()
+
+# Sugeneruokite atsitiktinio (nuo 10 iki 20) ilgio masyvą, kurio visi, išskyrus paskutinį, elementai yra atsitiktiniai
+# skaičiai nuo 0 iki 10, o paskutinis masyvas, kuris generuojamas pagal tokią pat salygą kaip ir pirmasis masyvas.
+# Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų. Paskutinio masyvo paskutinis elementas yra lygus 0;
+
+def rnd_len_arr ():
+  length = random.randint(10,20)
+  array = [random.randint(0,10) for i in range(length - 1)]
+  return array
+
+print(rnd_len_arr())
+print()
+
+
+# def generuoti_viska():
+#   visi_masyvai = []
+#
+#   for _ in range(random.randint(10, 30)):
+#     stack = []
+#     while True:
+#       ilgis = random.randint(10, 20)
+#       masyvas = [random.randint(0, 10) for _ in range(ilgis - 1)]
+#       if not stack:
+#         if random.random() < 0.3:
+#           masyvas.append(0)
+#           break
+#         else:
+#           stack.append(masyvas)
+#       else:
+#         stack[-1].append(masyvas)
+#         if random.random() < 0.3:
+#           masyvas.append(0)
+#           break
+#         else:
+#           stack.append(masyvas)
+#
+#     # Apjungiame visus į giliausią masyvą
+#     for i in range(len(stack) - 2, -1, -1):
+#       stack[i].append(stack[i + 1])
+#
+#     visi_masyvai.append(stack[0] if stack else masyvas)
+#
+#   # Spausdiname rezultatus
+#   for i, masyvas in enumerate(visi_masyvai, start=1):
+#     print(f"Masyvas {i}: {masyvas}")
+#
+#
+# # Paleidimas
+# generuoti_viska()
+
 
