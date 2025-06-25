@@ -184,9 +184,13 @@ print()
 # Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų. Paskutinio masyvo paskutinis elementas yra lygus 0;
 
 def rnd_len_arr ():
-  length = random.randint(10,20)
-  array = [random.randint(0,10) for i in range(length - 1)]
-  return array
+  for i in range(random.randint(10,30)):
+    big_array = []
+    while True:
+      length = random.randint(10,20)
+      array = [random.randint(0,10) for i in range(length - 1)]
+
+
 
 print(rnd_len_arr())
 print()
